@@ -15,9 +15,16 @@ const PORT = process.env.PORT;
 
 const __dirname = path.resolve();
 
-app.use(
+{/*app.use(
     cors({
         origin: "http://localhost:5173",
+        credentials: true, // allow frontend to send cookies
+    })
+);*/}
+
+app.use(
+    cors({
+        origin: "https://v-connect-chat-call.vercel.app/",
         credentials: true, // allow frontend to send cookies
     })
 );
